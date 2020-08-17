@@ -183,7 +183,7 @@ div .wideLabel {
     color: #666666;
 }
 
-#generatedOpnote {
+#generatedRecommendation {
     margin-top: 24px;
     background-color: #EEEEEE;
     display:none;
@@ -214,4 +214,3 @@ div .wideLabel {
 button:focus {
 outline: 0px solid transparent;
 }
-

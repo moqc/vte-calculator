@@ -30,3 +30,14 @@ function hoverInfoIcon(element) {
 function unhoverInfoIcon(element) {
     element.setAttribute('src', 'images/info-icon-grey-64x64.png');
 }
+
+function getFormDataElement(formData, name) {
+    for(var i = 0; i < formData.length; i++) {
+        if(formData[i].name == name)
+        {
+            return formData[i].value;
+        }
+    }
+
+    return "";
+}
