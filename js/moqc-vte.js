@@ -16,6 +16,47 @@ HomeVTECalculatorView = Backbone.View.extend({
         var vteHomeTemplate = _.template($('#vte-home-template').html())({});
         $('#mainpage').html(vteHomeTemplate);
 
+
+        
+        //on the form submit generate the opnote
+        $('#vteForm').submit(function (e) {
+            e.preventDefault();
+            var formId = this.id;  // "this" is a reference to the submitted form
+
+            var formData = $('#vteForm').serializeArray();
+
+            console.log(formData);
+
+            //showWarning();
+
+            //var opnote = generateOpnote(formData);
+
+            //$('#copiedAlert').fadeOut(50);
+
+            //$('#generatedOpnote').html(opnote);
+            //$('#generatedOpnote').slideDown(500);
+            //$('#copyToClipboardDiv').slideDown(500);
+            
+            // $("body,html").animate(
+            //     {
+            //       scrollTop: $("#generatedOpnoteDiv").offset().top
+            //     },
+            //     500 //speed
+            // );
+
+            // $('#copyToClipboardButton').click(function() {
+            //     copyToClipboard(opnote);
+            //     $('#copiedAlert').fadeIn(200);
+            // });
+
+        });
+
+        $('#resetFormButton').click(function() {
+            router.navigate("home");
+            window.location.reload();
+        });
+
+
     }
 });
 var homeVTECalculatorView = new HomeVTECalculatorView();
