@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <!-- library stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-toggle.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-select.css" type="text/css">
+    
+    <!-- jquery -->
+    <script src="js/libs/jquery/jquery-3.4.1.min.js"></script>
+    
+    <!-- backbone and dependencies -->
+    <script src="js/libs/backbone/underscore.js"></script>
+    <script src="js/libs/backbone/json2.js"></script>
+    <script src="js/libs/backbone/backbone.js"></script>
+    
+    <!-- jquery-ui and stylesheets -->
+    <script src="js/libs/jqueryui/jquery-ui.js"></script>
+    
+    
+    <!-- bootstrap -->
+    <script src="js/libs/bootstrap/bootstrap.bundle.js"></script>
+    <script src="js/libs/bootstrap/bootbox.min.js"></script>
+    <script src="js/libs/bootstrap/bootstrap-toggle.min.js"></script>
+    <script src="js/libs/bootstrap/bootstrap-select.min.js"></script>
+    
+    <!-- application styles -->
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    
+    <!-- opnote utils -->
+    <script src="js/moqc-vte-utils.js"></script>
+    
+  </head>
+  
+  <body>
+    
+    <div class="container-fluid d-flex flex-column" style="height: 100vh"> 
+        <div class="row">
+	        <div id="header" class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12 title-white">
+                        <h3 id="title">MOQC VTE Calculator</h3>
+                    </div>
+                </div>
+	        </div>
+	    </div>
+	    <div class="row">
+            <div id="mainpage" class="col-sm-12">
+            
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/template" id="vte-header-template">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 title-white text-center align-self-center">
+                    <h3 id="title">MOQC VTE Calculator</h3>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="vte-home-template">
+
+        <form class="was-validated" id="vteForm">
+
+            <div class="container-fluid vte-body">
+                <div class="row">
+                    <div class="col-sm-12 text-center align-self-center opnoteListTitle">
+                        Age:
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+
+                    <div class="col-sm-12 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="age0" class="btn btn-outline-secondary">&le;40
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="age1" class="btn btn-outline-secondary">41-60
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="age2" class="btn btn-outline-secondary">61-74
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="age3" class="btn btn-outline-secondary">&ge;75
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-12 text-center align-self-center opnoteListTitle">
+                        Type of Surgery:
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+
+                    <div class="col-sm-12 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="time0" class="btn btn-outline-secondary">Minimally Invasive
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="type1" class="btn btn-outline-secondary">Open/Vaginal/Vulvar
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 text-center align-self-center opnoteListTitle">
+                        Type of Surgery:
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+
+                    <div class="col-sm-12 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="time0" class="btn btn-outline-secondary">Minor &lt;180 mins
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="type1" class="btn btn-outline-secondary">Major &gt;180 mins
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Operation Time &gt; 180 minutes
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="time0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="time1" class="btn btn-outline-secondary">Yes +1
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        BMI &gt 25
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="bmi0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="bmi1" class="btn btn-outline-secondary">Yes +1
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Malignancy
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="malignancy0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="malignancy1" class="btn btn-outline-secondary">Yes +2
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Swollen Legs
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="swollenLegs0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="swollenLegs1" class="btn btn-outline-secondary">Yes +1
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Varicose Veins
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="varicose0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="varicose1" class="btn btn-outline-secondary">Yes +1
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Postpartum/Pregnancy
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="postpartum0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="postpartum1" class="btn btn-outline-secondary">Yes +1
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Hustory of recurrent SAB
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="sab0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="sab1" class="btn btn-outline-secondary">Yes +1
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Sepsis within last month
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="sepsis0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="sepsis1" class="btn btn-outline-secondary">Yes +1
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        OCP/HRT use
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="ocp0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="ocp1" class="btn btn-outline-secondary">Yes +1
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Serious Lung Disease
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="lung0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="lung1" class="btn btn-outline-secondary">Yes +1
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Abnormal PFT
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="pft0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="pft1" class="btn btn-outline-secondary">Yes +1
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Acute MI within last month
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="acuteMI0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="auteMI1" class="btn btn-outline-secondary">Yes +1
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        CHF within last month
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="chf0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="chf1" class="btn btn-outline-secondary">Yes +1
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        History of Inflammatory Bowel disease
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="ibd0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="ibd1" class="btn btn-outline-secondary">Yes +1
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Comfined to Bed &lt; 72 hours
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="swollenLegs0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="swollenLegs1" class="btn btn-outline-secondary">Yes +1
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Central Venous Access
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="cva0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="cva1" class="btn btn-outline-secondary">Yes +0
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        History of Unprovoked VTE
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="unprovokedVTE0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="unprovokedVTE1" class="btn btn-outline-secondary">Yes +3
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Family History of VTE
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="familyVTE0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="familyVTE1" class="btn btn-outline-secondary">Yes +3
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        History of Thrombophilia
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="throm0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="throm1" class="btn btn-outline-secondary">Yes +3
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Heparin Induced Thrombocytopenia
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="heparin0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="heparin1" class="btn btn-outline-secondary">Yes +3
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Stroke within last month
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="stroke0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="stroke1" class="btn btn-outline-secondary">Yes +3
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Hip, pelvis, or leg fracture
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="fracture0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="fracture1" class="btn btn-outline-secondary">Yes +3
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row spacedRow">
+                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                        Acute spinal cord injury within last month
+                    </div>
+                    
+                    <div class="col-sm-8 text-center align-self-center">
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="spinal0" class="btn btn-outline-secondary">No 0
+                            </label>
+
+                            <label class="btn btn-outline-secondary">
+                                <input type="radio" name="options" id="spinal1" class="btn btn-outline-secondary">Yes +3
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="row footer" id="submitDiv">
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-3 text-left align-self-top">
+                    <button class="btn btn-success" type="submit" id="generateCervicalOpnoteButton">Generate VTE Recommendation</button>
+                </div>
+                <div class="col-sm-2 text-left align-self-center">
+                    <div class="button" id="copyToClipboardDiv">
+                        <input type="button" class="btn btn-outline-secondary" id="copyToClipboardButton" value="Copy To Clipboard">
+                    </div>
+                </div>
+                <div class="col-sm-2 text-left align-self-center">
+                    <div class="alert alert-secondary" role="alert" id="copiedAlert">
+                        Recommendation Copied!
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-2 text-center align-self-center">
+                    <div class="button">
+                        <input type="button" class="btn btn-outline-danger" id="resetFormButton" value="Reset Form">
+                    </div>
+                </div>
+                <div class="col-sm-1">
+                </div>
+            </div>
+
+        </form>
+
+    </script>
+
+
+    <script type="text/template" id="vte-warning-template">
+
+        <div class="warningParagraph">
+            Users should take responsibility of checking the accuracy of this website prior to using the contents in critical situations, such as documentation in patient chart or medical records. The information provided on this website is "as-is" and makes no representations or warranties in relation to the medical information on this website.
+        </div>
+
+        <div class="warningParagraph">
+            I agree that the website host and developer will not be held responsible for any errors or consequences in management of patient care resulting from such errors. I will confirm that the information is correct before using it in any documentation.
+        </div>
+    </script>
+    
+  </body>
+
+  <!-- opnote app -->
+  <script src="js/moqc-vte.js"></script>
+
+  <!-- opnote app router -->
+  <script src="js/moqc-vte-router.js"></script>
+
+</html>
