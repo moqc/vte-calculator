@@ -16,7 +16,14 @@ HomeVTECalculatorView = Backbone.View.extend({
         var vteHomeTemplate = _.template($('#vte-home-template').html())({});
         $('#mainpage').html(vteHomeTemplate);
 
-
+        $('.updateScore').click(function() {
+            console.log("clicked");
+            setTimeout(function () {
+                var formData = $('#vteForm').serializeArray();
+                var score = calculateScore(formData);
+                $('#scoreLabel').html(score);
+            }, 50);
+        });
         
         //on the form submit generate the opnote
         $('#vteForm').submit(function (e) {
@@ -27,7 +34,7 @@ HomeVTECalculatorView = Backbone.View.extend({
 
             console.log(formData);
 
-            //showWarning();
+            showWarning();
 
             var recommendation = generateRecommendation(formData);
 
@@ -61,14 +68,8 @@ HomeVTECalculatorView = Backbone.View.extend({
 });
 var homeVTECalculatorView = new HomeVTECalculatorView();
 
+function calculateScore(formData) {
 
-function generateRecommendation(formData) {
-
-    var minimalNote = "**Due to the lack of robust data, duration of prophylaxis in minimally invasive surgery is not known. University of Michigan uses 10 days as patients undergoing minimally invasive surgery recover faster."
-
-    var generatedText = "";
-
-    
     //calculate score
     var score = 0;
     for(var i = 0; i < formData.length; i++) {
@@ -79,15 +80,53 @@ function generateRecommendation(formData) {
         }
     }
 
+    if(getFormDataElement(formData, "typeOfSurgery") == "minor")
+    {
+        //add the optime score which is dependent on the surgery type
+        var optimeScore = getFormDataElement(formData, "optime");
+        console.log(optimeScore);
+        if(optimeScore) {
+            score += parseInt(optimeScore);
+        }
+        
+    }
+    else if(getFormDataElement(formData, "typeOfSurgery") == "major")
+    {
+        //add a 2 for the "optime" score if over 45 mins (45 mins is a 0 score, above is 1 or 2 score) because this is OVV surgery
+        
+        var optimeScore = getFormDataElement(formData, "optime")
+        if(optimeScore) {
+            var optime = parseInt(optimeScore);
+            if(optime > 0) {
+                optime = 2;
+            }
+            score += optime;
+        }
+    }
+
+    return score
+}
+
+function generateRecommendation(formData) {
+
+    var minimalNote = "**Due to the lack of robust data, duration of prophylaxis in minimally invasive surgery is not known. University of Michigan uses 10 days as patients undergoing minimally invasive surgery recover faster."
+
+    var generatedText = "";
+
+    var score = calculateScore(formData);
+
     //console.log("SCORE: " + score);
 
     var subtext = "";
-    if(getFormDataElement(formData, "typeA") == "minor" || getFormDataElement(formData, "typeB") == "minor")
+    if(getFormDataElement(formData, "typeOfSurgery") == "minor")
     {
         generatedText += "Minimally Invasive Surgery Duration of Prophylaxis is 10 days";
         generatedText += '\n';
 
         var recommendExt = false;
+
+        // //add the optime score which is dependent on the surgery type
+        // score += getFormDataElement(formData, "optime");
 
         if(getFormDataElement(formData, "score-unprovokedVTE") == "1")
         {
@@ -121,12 +160,19 @@ function generateRecommendation(formData) {
 
         generatedText += subtext;
     }
-    else if(getFormDataElement(formData, "typeA") == "major" || getFormDataElement(formData, "typeB") == "major")
+    else if(getFormDataElement(formData, "typeOfSurgery") == "major")
     {
         generatedText += "Open/Vulvar/Vaginal Surgery Duration of Prolonged Prophylaxis is 28 days";
         generatedText += '\n';
 
         var recommendExt = false;
+
+        // //add a 2 for the "optime" score if over 45 mins (45 mins is a 0 score, above is 1 or 2 score) because this is OVV surgery
+        // var optime = getFormDataElement(formData, "optime");
+        // if(optime > 0) {
+        //     optime = 2;
+        // }
+        // score += optime;
 
         if(getFormDataElement(formData, "score-unprovokedVTE") == "1")
         {
@@ -159,7 +205,7 @@ function generateRecommendation(formData) {
     }
     else
     {
-        generatedText += "!!! ERROR: Select a surgery type !!!";
+        generatedText += "!!! ERROR: Select a Type of Surgery !!!";
         return generatedText;
     }
 
@@ -199,5 +245,4 @@ function showWarning() {
         }
     }).find("div.modal-dialog").addClass("modal-xl");
 }
-
 

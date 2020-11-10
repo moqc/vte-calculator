@@ -70,583 +70,623 @@
 
         <form class="was-validated" id="vteForm">
 
-            <div class="container-fluid vte-body">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12 text-center align-self-center opnoteListTitle">
-                        Age:
-                    </div>
-                </div>
 
-                <div class="row spacedRow">
+                    <div class="col-md-6 spacedCol">
 
-                    <div class="col-sm-12 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="age" id="age0" class="btn btn-outline-secondary" value="0">&le;40
-                            </label>
+                        <div class="row">
+                            <div class="col-md-1">
+                            </div>
 
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="age" id="age1" class="btn btn-outline-secondary" value="1">41-60
-                            </label>
+                            <div class="col-md-10">
 
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="age" id="age2" class="btn btn-outline-secondary" value="2">61-74
-                            </label>
+                                <div class="row">
+                                    <div class="col-sm-12 text-center align-self-center opnoteListTitle">
+                                        Age:
+                                    </div>
+                                </div>
+            
+                                <div class="row spacedRow">
+            
+                                    <div class="col-sm-12 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="age" id="age0" class="btn btn-outline-secondary" value="0">&le;40
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="age" id="age1" class="btn btn-outline-secondary" value="1">41-60
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="age" id="age2" class="btn btn-outline-secondary" value="2">61-74
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="age" id="age3" class="btn btn-outline-secondary" value="3">&ge;75
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+            
+            
+                                <div class="row">
+                                    <div class="col-sm-12 text-center align-self-center opnoteListTitle">
+                                        Type of Surgery:
+                                    </div>
+                                </div>
+            
+                                <div class="row spacedRow">
+            
+                                    <div class="col-sm-12 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="typeOfSurgery" id="typeA0" class="btn btn-outline-secondary" value="minor">Minimally Invasive
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="typeOfSurgery" id="typeA1" class="btn btn-outline-secondary" value="major">Open/Vaginal/Vulvar
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="row">
+                                    <div class="col-sm-12 text-center align-self-center opnoteListTitle">
+                                        Operation Time:
+                                    </div>
+                                </div>
+            
+                                <div class="row spacedRow">
+            
+                                    <div class="col-sm-12 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="optime" id="time0" class="btn btn-outline-secondary" value="0">&lt;45 mins
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="optime" id="time1" class="btn btn-outline-secondary" value="1">45 to 180 mins
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="optime" id="time2" class="btn btn-outline-secondary" value="2">&gt;180 mins
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+            
+            
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        BMI &gt 25
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-bmi" id="bmi0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-bmi" id="bmi1" class="btn btn-outline-secondary" value="1">Yes +1
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+            
+            
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Malignancy
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-malignancy" id="malignancy0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-malignancy" id="malignancy1" class="btn btn-outline-secondary" value="2">Yes +2
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+            
+            
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Swollen Legs
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-swollenLegs" id="swollenLegs0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-swollenLegs" id="swollenLegs1" class="btn btn-outline-secondary" value="1">Yes +1
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Varicose Veins
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-varicose" id="varicose0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-varicose" id="varicose1" class="btn btn-outline-secondary" value="1">Yes +1
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Postpartum/Pregnancy
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-postpartum" id="postpartum0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-postpartum" id="postpartum1" class="btn btn-outline-secondary" value="1">Yes +1
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+            
+            
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Hustory of recurrent SAB
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-sab" id="sab0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-sab" id="sab1" class="btn btn-outline-secondary" value="1">Yes +1
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Sepsis within last month
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-sepsis" id="sepsis0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-sepsis" id="sepsis1" class="btn btn-outline-secondary" value="1">Yes +1
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        OCP/HRT use
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-ocp" id="ocp0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-ocp" id="ocp1" class="btn btn-outline-secondary" value="1">Yes +1
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Serious Lung Disease
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-lung" id="lung0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-lung" id="lung1" class="btn btn-outline-secondary" value="1">Yes +1
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Abnormal PFT
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-pft" id="pft0" class="btn btn-outline-secondary">No 0
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-pft" id="pft1" class="btn btn-outline-secondary" value="1">Yes +1
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Acute MI within last month
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-acuteMI" id="acuteMI0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+            
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-acuteMI" id="auteMI1" class="btn btn-outline-secondary" value="1">Yes +1
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="age" id="age3" class="btn btn-outline-secondary" value="3">&ge;75
-                            </label>
+
+                            </div>
+
+                            <div class="col-md-1">
+                            </div>
                         </div>
+
+                        
+
                     </div>
-                </div>
 
 
-                <div class="row">
-                    <div class="col-sm-12 text-center align-self-center opnoteListTitle">
-                        Type of Surgery (1):
-                    </div>
-                </div>
+                    <div class="col-md-6 spacedCol">
 
-                <div class="row spacedRow">
+                        <div class="row">
+                            <div class="col-md-1">
+                            </div>
 
-                    <div class="col-sm-12 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="typeA" id="typeA0" class="btn btn-outline-secondary" value="minor">Minimally Invasive
-                            </label>
+                            <div class="col-md-10">
 
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="typeA" id="typeA1" class="btn btn-outline-secondary" value="major">Open/Vaginal/Vulvar
-                            </label>
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        CHF within last month
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-chf" id="chf0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-chf" id="chf1" class="btn btn-outline-secondary" value="1">Yes +1
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        History of Inflammatory Bowel disease
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-ibd" id="ibd0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-ibd" id="ibd1" class="btn btn-outline-secondary" value="1">Yes +1
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Comfined to Bed &lt; 72 hours
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-bed" id="bed0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-bed" id="bed1" class="btn btn-outline-secondary" value="1">Yes +1
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Central Venous Access
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-cva" id="cva0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-cva" id="cva1" class="btn btn-outline-secondary" value="0">Yes +0
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        History of Unprovoked VTE
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-unprovokedVTE" id="unprovokedVTE0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-unprovokedVTE" id="unprovokedVTE1" class="btn btn-outline-secondary" value="3">Yes +3
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Family History of VTE
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-familyVTE" id="familyVTE0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-familyVTE" id="familyVTE1" class="btn btn-outline-secondary" value="3">Yes +3
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        History of Thrombophilia
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-throm" id="throm0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-throm" id="throm1" class="btn btn-outline-secondary" value="3">Yes +3
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Heparin Induced Thrombocytopenia
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-heparin" id="heparin0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-heparin" id="heparin1" class="btn btn-outline-secondary" value="3">Yes +3
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Stroke within last month
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-stroke" id="stroke0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-stroke" id="stroke1" class="btn btn-outline-secondary" value="3">Yes +3
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Hip, pelvis, or leg fracture
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-fracture" id="fracture0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-fracture" id="fracture1" class="btn btn-outline-secondary" value="3">Yes +3
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Acute spinal cord injury within last month
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-spinal" id="spinal0" class="btn btn-outline-secondary" value="0">No 0
+                                            </label>
+
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="score-spinal" id="spinal1" class="btn btn-outline-secondary" value="3">Yes +3
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        G3/Serous/Clear cell/Carcinosarcoma
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="histology" id="histology0" class="btn btn-outline-secondary" value="false">No
+                                            </label>
+
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="histology" id="histology1" class="btn btn-outline-secondary" value="true">Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row spacedRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        Suspected of Confirmed Stage III/IV disease
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center">
+                                        <div class="btn-group btn-group-toggle updateScore" data-toggle="buttons">
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="stage" id="stage0" class="btn btn-outline-secondary" value="false">No
+                                            </label>
+
+                                            <label class="btn btn-outline-secondary">
+                                                <input type="radio" name="stage" id="stage1" class="btn btn-outline-secondary" value="true">Yes
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row scoreRow">
+                                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
+                                        TOTAL SCORE
+                                    </div>
+                                    
+                                    <div class="col-sm-8 text-center align-self-center" id="scoreLabel">
+                                        0
+                                    </div>
+                                </div>
+
+                                <div class="row footer" id="submitDiv">
+                                    
+                                    <div class="col-sm-4 text-left align-self-top">
+                                        <button class="btn btn-success" type="submit" id="generateVTEButton">Get Recommendation</button>
+                                    </div>
+                                    <div class="col-sm-3 text-left align-self-center">
+                                        <div class="button" id="copyToClipboardDiv">
+                                            <input type="button" class="btn btn-outline-secondary" id="copyToClipboardButton" value="Copy To Clipboard">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 text-left align-self-center">
+                                        <div class="alert alert-secondary" role="alert" id="copiedAlert">
+                                            Copied!
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 text-center align-self-center">
+                                        <div class="button">
+                                            <input type="button" class="btn btn-outline-danger" id="resetFormButton" value="Reset Form">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+
+                            </div>
+
+                            <div class="col-md-1">
+                            </div>
                         </div>
+
+
                     </div>
+
                 </div>
-
-                <div class="row">
-                    <div class="col-sm-12 text-center align-self-center opnoteListTitle">
-                        Type of Surgery (2):
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-
-                    <div class="col-sm-12 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="typeB" id="typeB0" class="btn btn-outline-secondary" value="minor">Minor &lt;180 mins
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="typeB" id="typeB1" class="btn btn-outline-secondary" value="major">Major &gt;180 mins
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Operation Time &gt; 180 minutes
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-time" id="time0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-time" id="time1" class="btn btn-outline-secondary" value="1">Yes +1
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        BMI &gt 25
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-bmi" id="bmi0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-bmi" id="bmi1" class="btn btn-outline-secondary" value="1">Yes +1
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Malignancy
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-malignancy" id="malignancy0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-malignancy" id="malignancy1" class="btn btn-outline-secondary" value="2">Yes +2
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Swollen Legs
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-swollenLegs" id="swollenLegs0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-swollenLegs" id="swollenLegs1" class="btn btn-outline-secondary" value="1">Yes +1
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Varicose Veins
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-varicose" id="varicose0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-varicose" id="varicose1" class="btn btn-outline-secondary" value="1">Yes +1
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Postpartum/Pregnancy
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-postpartum" id="postpartum0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-postpartum" id="postpartum1" class="btn btn-outline-secondary" value="1">Yes +1
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Hustory of recurrent SAB
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-sab" id="sab0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-sab" id="sab1" class="btn btn-outline-secondary" value="1">Yes +1
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Sepsis within last month
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-sepsis" id="sepsis0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-sepsis" id="sepsis1" class="btn btn-outline-secondary" value="1">Yes +1
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        OCP/HRT use
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-ocp" id="ocp0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-ocp" id="ocp1" class="btn btn-outline-secondary" value="1">Yes +1
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Serious Lung Disease
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-lung" id="lung0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-lung" id="lung1" class="btn btn-outline-secondary" value="1">Yes +1
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Abnormal PFT
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-pft" id="pft0" class="btn btn-outline-secondary">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-pft" id="pft1" class="btn btn-outline-secondary" value="1">Yes +1
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Acute MI within last month
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-acuteMI" id="acuteMI0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-acuteMI" id="auteMI1" class="btn btn-outline-secondary" value="1">Yes +1
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        CHF within last month
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-chf" id="chf0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-chf" id="chf1" class="btn btn-outline-secondary" value="1">Yes +1
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        History of Inflammatory Bowel disease
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-ibd" id="ibd0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-ibd" id="ibd1" class="btn btn-outline-secondary" value="1">Yes +1
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Comfined to Bed &lt; 72 hours
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-bed" id="bed0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-bed" id="bed1" class="btn btn-outline-secondary" value="1">Yes +1
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Central Venous Access
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-cva" id="cva0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-cva" id="cva1" class="btn btn-outline-secondary" value="0">Yes +0
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        History of Unprovoked VTE
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-unprovokedVTE" id="unprovokedVTE0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-unprovokedVTE" id="unprovokedVTE1" class="btn btn-outline-secondary" value="3">Yes +3
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Family History of VTE
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-familyVTE" id="familyVTE0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-familyVTE" id="familyVTE1" class="btn btn-outline-secondary" value="3">Yes +3
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        History of Thrombophilia
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-throm" id="throm0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-throm" id="throm1" class="btn btn-outline-secondary" value="3">Yes +3
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Heparin Induced Thrombocytopenia
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-heparin" id="heparin0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-heparin" id="heparin1" class="btn btn-outline-secondary" value="3">Yes +3
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Stroke within last month
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-stroke" id="stroke0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-stroke" id="stroke1" class="btn btn-outline-secondary" value="3">Yes +3
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Hip, pelvis, or leg fracture
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-fracture" id="fracture0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-fracture" id="fracture1" class="btn btn-outline-secondary" value="3">Yes +3
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Acute spinal cord injury within last month
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-spinal" id="spinal0" class="btn btn-outline-secondary" value="0">No 0
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="score-spinal" id="spinal1" class="btn btn-outline-secondary" value="3">Yes +3
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        G3/Serous/Clear cell/Carcinosarcoma
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="histology" id="histology0" class="btn btn-outline-secondary" value="false">No
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="histology" id="histology1" class="btn btn-outline-secondary" value="true">Yes
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row spacedRow">
-                    <div class="col-sm-4 text-center align-self-center opnoteListTitle">
-                        Suspected of Confirmed Stage III/IV disease
-                    </div>
-                    
-                    <div class="col-sm-8 text-center align-self-center">
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="stage" id="stage0" class="btn btn-outline-secondary" value="false">No
-                            </label>
-
-                            <label class="btn btn-outline-secondary">
-                                <input type="radio" name="stage" id="stage1" class="btn btn-outline-secondary" value="true">Yes
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
-
-            <div class="row footer" id="submitDiv">
-                <div class="col-sm-1">
-                </div>
-                <div class="col-sm-3 text-left align-self-top">
-                    <button class="btn btn-success" type="submit" id="generateVTEButton">Generate VTE Recommendation</button>
-                </div>
-                <div class="col-sm-2 text-left align-self-center">
-                    <div class="button" id="copyToClipboardDiv">
-                        <input type="button" class="btn btn-outline-secondary" id="copyToClipboardButton" value="Copy To Clipboard">
-                    </div>
-                </div>
-                <div class="col-sm-3 text-left align-self-center">
-                    <div class="alert alert-secondary" role="alert" id="copiedAlert">
-                        Recommendation Copied!
-                    </div>
-                </div>
-                <div class="col-sm-2 text-center align-self-center">
-                    <div class="button">
-                        <input type="button" class="btn btn-outline-danger" id="resetFormButton" value="Reset Form">
-                    </div>
-                </div>
-                <div class="col-sm-1">
-                </div>
-            </div>
+            
 
         </form>
 
-        <div class="row footer" id="generatedRecommendationDiv">
-            <div class="col-sm-1">
-            </div>
-            <div class="col-sm-10" >
-                <pre id="generatedRecommendation">
+        <div class="container-fluid">
+            <div class="row footer" id="generatedRecommendationDiv">
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-10" >
+                    <pre id="generatedRecommendation">
 
-                </pre>
-            </div>
-            <div class="col-sm-1">
+                    </pre>
+                </div>
+                <div class="col-sm-1">
+                </div>
             </div>
         </div>
 
-        <div class="row footer" id="footerDiv">
-            <div class="col-sm-1">
-            </div>
-            <div class="col-sm-10">
-                
-            </div>
-            <div class="col-sm-1">
+        <div class="container-fluid">
+            <div class="row footer" id="footerDiv">
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-10">
+                    
+                </div>
+                <div class="col-sm-1">
+                </div>
             </div>
         </div>
 

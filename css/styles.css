@@ -4,12 +4,22 @@ div #main-container {
 	height: 100vh;
 }
 
-
 .spacedRow {
     padding-top: 8px;
     padding-bottom: 8px;
 
     border-bottom: 1px solid #666666;
+}
+
+.scoreRow {
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    font-weight: bold;
+    font-size: 18px;
+    color: #666666;
+
+    background-color: #feffb9  ;
 }
 
 
@@ -57,7 +67,9 @@ div .title-white {
 }
 
 div #header {
-	padding-top: 8px;
+    padding-top: 8px;
+    
+    margin-bottom: 12px;
 	
 	height: 50px;
     background-color: #bebebe  ;
@@ -159,7 +171,7 @@ ul#opnoteList {
 }
 
 div #submitDiv {
-    margin-top: 48px;
+    margin-top: 18px;
 }
 
 div #footerDiv {
