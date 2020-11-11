@@ -228,7 +228,8 @@ function showWarning() {
         backdrop: true,
         closeButton: false,
         onEscape: function() {
-            return true;
+            router.navigate("");
+            window.location.reload();
         },
         buttons: {
             ok: {
@@ -242,7 +243,7 @@ function showWarning() {
                 label: 'I Disagree',
                 className: 'btn-error',
                 callback: function(){
-                    window.location.replace("https://moqc.org/initiatives/gyn-onc/");
+                    window.location.href = "https://moqc.org/initiatives/gynecologic-oncology/";
                 }
             },
         }
