@@ -190,8 +190,13 @@ function generateRecommendation(formData) {
 
         if(recommendExt)
         {
-            generatedText += "Open/Vulvar/Vaginal Surgery Duration of Prolonged Prophylaxis is 28 days";
-            generatedText += '\n';
+            if(getFormDataElement(formData, "typeOfSurgery") == "major-open") {
+                generatedText += "Open Surgery Duration of Prolonged Prophylaxis is 28 days";
+            }
+            else if(getFormDataElement(formData, "typeOfSurgery") == "major-vv") {
+                generatedText += "Vulvar/Vaginal Surgery Duration of Prolonged Prophylaxis is 28 days";
+            }
+            
             generatedText += "Extended Prophylaxis Recommended" + '\n';
         }
         else
