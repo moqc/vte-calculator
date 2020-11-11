@@ -120,9 +120,6 @@ function generateRecommendation(formData) {
     var subtext = "";
     if(getFormDataElement(formData, "typeOfSurgery") == "minor")
     {
-        generatedText += "Minimally Invasive Surgery Duration of Prophylaxis is 10 days";
-        generatedText += '\n';
-
         var recommendExt = false;
 
         // //add the optime score which is dependent on the surgery type
@@ -151,6 +148,8 @@ function generateRecommendation(formData) {
 
         if(recommendExt)
         {
+            generatedText += "Minimally Invasive Surgery Duration of Prophylaxis is 10 days";
+            generatedText += '\n';
             generatedText += "Extended Prophylaxis Recommended" + '\n';
         }
         else
@@ -162,9 +161,6 @@ function generateRecommendation(formData) {
     }
     else if(getFormDataElement(formData, "typeOfSurgery") == "major")
     {
-        generatedText += "Open/Vulvar/Vaginal Surgery Duration of Prolonged Prophylaxis is 28 days";
-        generatedText += '\n';
-
         var recommendExt = false;
 
         // //add a 2 for the "optime" score if over 45 mins (45 mins is a 0 score, above is 1 or 2 score) because this is OVV surgery
@@ -194,6 +190,8 @@ function generateRecommendation(formData) {
 
         if(recommendExt)
         {
+            generatedText += "Open/Vulvar/Vaginal Surgery Duration of Prolonged Prophylaxis is 28 days";
+            generatedText += '\n';
             generatedText += "Extended Prophylaxis Recommended" + '\n';
         }
         else
