@@ -125,7 +125,7 @@ function generateRecommendation(formData) {
         // //add the optime score which is dependent on the surgery type
         // score += getFormDataElement(formData, "optime");
 
-        if(getFormDataElement(formData, "score-unprovokedVTE") == "1")
+        if(getFormDataElement(formData, "score-unprovokedVTE") == "3")
         {
             subtext += " Recommended due to:  Personal history of unprovoked VTE";
             recommendExt = true;
