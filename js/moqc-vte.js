@@ -159,7 +159,7 @@ function generateRecommendation(formData) {
 
         generatedText += subtext;
     }
-    else if(getFormDataElement(formData, "typeOfSurgery") == "major")
+    else if(getFormDataElement(formData, "typeOfSurgery").startsWith("major"))
     {
         var recommendExt = false;
 
@@ -176,7 +176,7 @@ function generateRecommendation(formData) {
             recommendExt = true;
         }
 
-        if(getFormDataElement(formData, "score-malignancy") == "1")
+        if(getFormDataElement(formData, "score-malignancy") == "2" && getFormDataElement(formData, "typeOfSurgery") == "major-open")
         {
             subtext += " Recommended due to:  Patient with malignancy";
             recommendExt = true;
