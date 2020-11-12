@@ -131,14 +131,20 @@ function generateRecommendation(formData) {
             recommendExt = true;
         }
 
-        if(score == 5 || score == 6)
+        if(getFormDataElement(formData, "histology") == "true" || getFormDataElement(formData, "stage") == "true")
         {
-            if(getFormDataElement(formData, "histology") == "true" || getFormDataElement(formData, "stage") == "true")
-            {
-                subtext += " Recommended due to:  Histology/Stage AND caprini score 5-6";
-                recommendExt = true;
-            }
+            subtext += " Recommended due to:  Histology/Stage";
+            recommendExt = true;
         }
+
+        // if(score == 5 || score == 6)
+        // {
+        //     if(getFormDataElement(formData, "histology") == "true" || getFormDataElement(formData, "stage") == "true")
+        //     {
+        //         subtext += " Recommended due to:  Histology/Stage AND caprini score 5-6";
+        //         recommendExt = true;
+        //     }
+        // }
 
         if(score >= 7)
         {
@@ -179,6 +185,12 @@ function generateRecommendation(formData) {
         if(getFormDataElement(formData, "score-malignancy") == "2" && getFormDataElement(formData, "typeOfSurgery") == "major-open")
         {
             subtext += " Recommended due to:  Patient with malignancy";
+            recommendExt = true;
+        }
+
+        if(getFormDataElement(formData, "histology") == "true" || getFormDataElement(formData, "stage") == "true")
+        {
+            subtext += " Recommended due to:  Histology/Stage";
             recommendExt = true;
         }
 

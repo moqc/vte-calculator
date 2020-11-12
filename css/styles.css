@@ -11,6 +11,16 @@ div #main-container {
     border-bottom: 1px solid #666666;
 }
 
+.spacedRowNoBorder {
+    padding-top: 2px;
+
+}
+
+#detailsRow{
+    margin-top: 4px;
+}
+
+
 .scoreRow {
     padding-top: 8px;
     padding-bottom: 8px;
@@ -69,7 +79,7 @@ div .title-white {
 div #header {
     padding-top: 8px;
     
-    margin-bottom: 12px;
+    margin-bottom: 6px;
 	
 	height: 50px;
     background-color: #bebebe  ;
