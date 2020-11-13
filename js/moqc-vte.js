@@ -90,7 +90,7 @@ function calculateScore(formData) {
         }
         
     }
-    else if(getFormDataElement(formData, "typeOfSurgery") == "major")
+    else if(getFormDataElement(formData, "typeOfSurgery").startsWith("major"))
     {
         //add a 2 for the "optime" score if over 45 mins (45 mins is a 0 score, above is 1 or 2 score) because this is OVV surgery
         
