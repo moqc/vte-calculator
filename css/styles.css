@@ -73,11 +73,12 @@ div #pageTop {
 }
 
 div .title-white {
-	color: white;
+    color: white;
+    margin-top: 8px;
 }
 
 div #header {
-    padding-top: 8px;
+    padding-top: 0px;
     
     margin-bottom: 6px;
 	
