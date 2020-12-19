@@ -182,7 +182,7 @@ ul#opnoteList {
 }
 
 div #submitDiv {
-    margin-top: 18px;
+    margin-top: 12px;
 }
 
 div #footerDiv {
@@ -207,7 +207,7 @@ div .wideLabel {
 }
 
 #generatedRecommendation {
-    margin-top: 24px;
+    margin-top: 8px;
     background-color: #EEEEEE;
     display:none;
 }

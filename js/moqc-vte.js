@@ -224,7 +224,7 @@ function generateRecommendation(formData) {
     }
 
 
-    generatedText += '\n';
+    // generatedText += '\n';
 
     return generatedText;
 }
