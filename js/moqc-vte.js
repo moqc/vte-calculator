@@ -127,13 +127,13 @@ function generateRecommendation(formData) {
 
         if(getFormDataElement(formData, "score-unprovokedVTE") == "3")
         {
-            subtext += " Recommended due to:  Personal history of unprovoked VTE";
+            subtext += " Recommended due to:  Personal history of unprovoked VTE"  + '\n';
             recommendExt = true;
         }
 
         if(getFormDataElement(formData, "histology") == "true" || getFormDataElement(formData, "stage") == "true")
         {
-            subtext += " Recommended due to:  Histology/Stage";
+            subtext += " Recommended due to:  Histology/Stage"  + '\n';
             recommendExt = true;
         }
 
@@ -148,14 +148,13 @@ function generateRecommendation(formData) {
 
         if(score >= 7)
         {
-            subtext += " Recommended due to:  Caprini score 7 or more";
+            subtext += " Recommended due to:  Caprini score 7 or more"  + '\n';
             recommendExt = true;
         }
 
         if(recommendExt)
         {
-            generatedText += "Minimally Invasive Surgery Duration of Prophylaxis is 10 days";
-            generatedText += '\n';
+            generatedText += "Minimally Invasive Surgery Duration of Prophylaxis is 10 days"  + '\n';
             generatedText += "Extended Prophylaxis Recommended" + '\n';
         }
         else
@@ -178,35 +177,35 @@ function generateRecommendation(formData) {
 
         if(getFormDataElement(formData, "score-unprovokedVTE") == "1")
         {
-            subtext += " Recommended due to:  Personal history of unprovoked VTE";
+            subtext += " Recommended due to:  Personal history of unprovoked VTE"  + '\n';
             recommendExt = true;
         }
 
         if(getFormDataElement(formData, "score-malignancy") == "2" && getFormDataElement(formData, "typeOfSurgery") == "major-open")
         {
-            subtext += " Recommended due to:  Patient with malignancy";
+            subtext += " Recommended due to:  Patient with malignancy"  + '\n';
             recommendExt = true;
         }
 
         if(getFormDataElement(formData, "histology") == "true" || getFormDataElement(formData, "stage") == "true")
         {
-            subtext += " Recommended due to:  Histology/Stage";
+            subtext += " Recommended due to:  Histology/Stage"  + '\n';
             recommendExt = true;
         }
 
         if(score >= 5)
         {
-            subtext += " Recommended due to:  Caprini score 5 or more";
+            subtext += " Recommended due to:  Caprini score 5 or more"  + '\n';
             recommendExt = true;
         }
 
         if(recommendExt)
         {
             if(getFormDataElement(formData, "typeOfSurgery") == "major-open") {
-                generatedText += "Open Surgery Duration of Prolonged Prophylaxis is 28 days";
+                generatedText += "Open Surgery Duration of Prolonged Prophylaxis is 28 days"  + '\n';
             }
             else if(getFormDataElement(formData, "typeOfSurgery") == "major-vv") {
-                generatedText += "Vulvar/Vaginal Surgery Duration of Prolonged Prophylaxis is 28 days";
+                generatedText += "Vulvar/Vaginal Surgery Duration of Prolonged Prophylaxis is 28 days"  + '\n';
             }
             
             generatedText += "Extended Prophylaxis Recommended" + '\n';
@@ -225,7 +224,7 @@ function generateRecommendation(formData) {
     }
 
 
-    generatedText += '\n' + '\n';
+    generatedText += '\n';
 
     return generatedText;
 }
