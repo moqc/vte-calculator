@@ -9,8 +9,8 @@ HomeVTECalculatorView = Backbone.View.extend({
         var data = {
         };
 
-        var vteHeaderTemplate = _.template($('#vte-header-template').html())(data);
-        $('#header').html(vteHeaderTemplate);
+        // var vteHeaderTemplate = _.template($('#vte-header-template').html())(data);
+        // $('#header').html(vteHeaderTemplate);
 
         //render mainpage buttons
         var vteHomeTemplate = _.template($('#vte-home-template').html())({});
